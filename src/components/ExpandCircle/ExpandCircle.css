@@ -1,0 +1,37 @@
+@keyframes expandCircle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+  to {
+    width: 300vw; /* Une taille très grande pour couvrir tout l'écran */
+    height: 300vw;
+    opacity: 1;
+  }
+}
+
+@keyframes shrinkCircle {
+  from {
+    width: 300vw;
+    height: 300vw;
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    height: 0;
+    opacity: 0.8;
+  }
+}
+
+.animate-expandCircle {
+  animation: expandCircle 1.5s ease-in-out forwards;
+  position: absolute;
+  z-index: -1;
+}
+
+.animate-shrinkCircle {
+  animation: shrinkCircle 1.5s ease-in-out forwards;
+  position: absolute;
+  z-index: -1;
+}

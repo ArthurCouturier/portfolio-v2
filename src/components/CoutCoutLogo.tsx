@@ -25,7 +25,7 @@ export default function CoutCoutLogo(props: { animated: boolean }) {
 
     return (
         <a
-            className="font-extrabold font-tigedeblug flex items-center"
+            className="font-extrabold font-tigedeblug flex items-center w-min scale-150"
             href={"/"}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

@@ -2,8 +2,8 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import './App.css'
 import Home from './pages/Home';
+import Header from './components/Header';
 
 const router = createBrowserRouter([
   {
@@ -12,16 +12,22 @@ const router = createBrowserRouter([
   },
 ])
 
-function App() {
+export default function App() {
+
+  const [circleExpanded, setCircleExpanded] = React.useState(false);
+
+  const handleCircleClick = () => {
+    setCircleExpanded(!circleExpanded);
+  }
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline bg-red-400">
-        Hello world!
-      </h1>
-      <RouterProvider router={router}/>
+    <div className='bg-blue-300 w-[100vw]'>
+      <Header handleCircleExpanded={handleCircleClick} />
+      {circleExpanded?
+        <div className='bg-red-300 h-20 w-20 rounded-full'> </div>
+        : 
+        <RouterProvider router={router}/>
+      }
     </div>
   )
 }
-
-export default App
