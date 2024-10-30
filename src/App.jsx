@@ -4,11 +4,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
 import Menu from './pages/Menu';
+import Skills from './pages/Skills';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: '/web-skills',
+    element: <Skills />,
   },
 ]);
 
@@ -26,7 +31,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-indigo-300 w-[100vw] h-[100vh] relative overflow-hidden"> {/* Ajoute overflow-hidden et relative ici */}
+    <div className="bg-indigo-300 w-screen h-screen relative overflow-hidden font-semibold text-xl"> {/* Ajoute overflow-hidden et relative ici */}
       <Header handleCircleExpanded={handleCircleClick} />
       <RouterProvider router={router} />
       <div

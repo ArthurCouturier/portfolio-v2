@@ -25,7 +25,7 @@ export default function Header(props: { handleCircleExpanded: () => void }) {
             <div className="relative flex-5">
                 <ExpandCircle circleState={circleState} setCircleState={setCircleState} />
                 <img
-                    className="relative w-[7vw] rounded-full scale-150 border-[#2f2e6e] border-4
+                    className="relative w-[12vw] sm:w-[10vw] md:w-[7vw] lg:w-[6vw] xl:w-[5vw] rounded-full scale-[1.5] border-[#2f2e6e] border-4
           hover:border-8 transition-all duration-500 ease-in-out cursor-pointer z-50"
                     src="/src/assets/images/pp_square.png"
                     alt="Profile picture"
