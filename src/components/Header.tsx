@@ -18,14 +18,14 @@ export default function Header(props: { handleCircleExpanded: () => void }) {
     };
 
     return (
-        <div className="m-12 flex relative"> {/* Assure-toi que le Header a un z-index plus élevé */}
+        <div className="m-12 flex relative">
             <div className="flex-1">
                 <CoutCoutLogo animated={true} />
             </div>
             <div className="relative flex-5">
                 <ExpandCircle circleState={circleState} setCircleState={setCircleState} />
                 <img
-                    className="relative w-[12vw] sm:w-[10vw] md:w-[7vw] lg:w-[6vw] xl:w-[5vw] rounded-full scale-[1.5] border-[#2f2e6e] border-4
+                    className="relative w-[12vw] sm:w-[10vw] md:w-[7vw] lg:w-[6vw] xl:w-[5vw] rounded-full scale-[1.5] border-coutPurple border-4
           hover:border-8 transition-all duration-500 ease-in-out cursor-pointer z-50"
                     src="/src/assets/images/pp_square.png"
                     alt="Profile picture"

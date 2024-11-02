@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function Skill(props: { skill: string }) {
 
     const skill = JSON.parse(props.skill);
-    const [logo, setLogo] = useState(skill.icon);
+    const [logo, setLogo] = useState(skill.icon + " colored");
     function changerLogo() {
         if (logo === skill.icon) {
             setLogo(skill.icon + " colored");
