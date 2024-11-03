@@ -11,6 +11,7 @@ import FrontSkillsPage from './pages/FrontSkillsPage';
 import BackSkillsPage from './pages/BackSkillsPage';
 import ToolsSkillsPage from './pages/ToolsSkillsPage';
 import ContactPage from './pages/ContactPage';
+import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
   {
     path: '/missions',
     element: <Missions />,
+  },
+  {
+    path: '/missions/pepperz-app',
+    element: <PepperzMissionPage />,
   },
   {
     path: '/contact',
