@@ -6,6 +6,11 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Menu from './pages/Menu';
 import Skills from './pages/Skills';
+import Missions from './pages/Missions';
+import FrontSkillsPage from './pages/FrontSkillsPage';
+import BackSkillsPage from './pages/BackSkillsPage';
+import ToolsSkillsPage from './pages/ToolsSkillsPage';
+import ContactPage from './pages/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +20,26 @@ const router = createBrowserRouter([
   {
     path: '/web-skills',
     element: <Skills />,
+  },
+  {
+    path: '/web-skills/frontend',
+    element: <FrontSkillsPage />,
+  },
+  {
+    path: '/web-skills/backend',
+    element: <BackSkillsPage />,
+  },
+  {
+    path: '/web-skills/tools',
+    element: <ToolsSkillsPage />,
+  },
+  {
+    path: '/missions',
+    element: <Missions />,
+  },
+  {
+    path: '/contact',
+    element: <ContactPage />,
   },
 ]);
 
