@@ -25,26 +25,26 @@ export default function CoutCoutLogo(props: { animated: boolean }) {
 
     return (
         <a
-            className="font-extrabold font-tigedeblug flex items-center"
+            className="font-extrabold font-tigedeblug flex items-center w-min scale-[1.4] sm:scale-[1.6] md:scale-[1.8] lg:scale-[2] xl:scale-[2.2] 2xl:scale-[2.5]"
             href={"/"}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             <div className={"text-center w-3 " + (isHovered ? " -mb-2" : " -mt-2")}>
-                <div className={"text-[#f4cf77] " + smallLetterClassName}>C</div>
-                <div className={"text-[#2f2e6e] " + bigLetterClassName + " -mt-2"}>C</div>
+                <div className={"text-coutYellow " + smallLetterClassName}>C</div>
+                <div className={"text-coutPurple " + bigLetterClassName + " -mt-2"}>C</div>
             </div>
             <div className={"w-3 " + (isHovered ? " -mb-0.5" : " -mt-0.5")}>
-                <div className={"text-[#f4cf77] " + bigLetterClassName}>O</div>
-                <div className={"text-[#2f2e6e] " + smallLetterClassName}>O</div>
+                <div className={"text-coutYellow " + bigLetterClassName}>O</div>
+                <div className={"text-coutPurple " + smallLetterClassName}>O</div>
             </div>
             <div className={"w-3 " + (isHovered ? " -mb-0.5" : " -mt-0.5")}>
-                <div className={"text-[#f4cf77] " + bigLetterClassName}>U</div>
-                <div className={"text-[#2f2e6e] " + smallLetterClassName}>U</div>
+                <div className={"text-coutYellow " + bigLetterClassName}>U</div>
+                <div className={"text-coutPurple " + smallLetterClassName}>U</div>
             </div>
             <div className={"text-center w-3 " + (isHovered ? " -mb-2" : " -mt-2")}>
-                <div className={"text-[#f4cf77] " + smallLetterClassName}>T</div>
-                <div className={"text-[#2f2e6e] " + bigLetterClassName + " -mt-2"}>T</div>
+                <div className={"text-coutYellow " + smallLetterClassName}>T</div>
+                <div className={"text-coutPurple " + bigLetterClassName + " -mt-2"}>T</div>
             </div>
         </a>
     )

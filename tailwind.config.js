@@ -9,6 +9,10 @@ export default {
       fontFamily: {
         'tigedeblug': ['Tigedeblug', 'sans-serif'],
       },
+      colors: {
+        coutYellow: '#f4cf77',
+        coutPurple: '#2f2e6e',
+      },
     },
   },
   plugins: [

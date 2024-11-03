@@ -1,3 +1,21 @@
+body::-webkit-scrollbar {
+  width: 0.2em;
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: 'Tigedeblug';
+  src: url('./assets/fonts/Tigedeblug.ttf') format('truetype');
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Cache la scrollbar sur Chrome, Safari et Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Cache la scrollbar sur Internet Explorer et Edge */
+  scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+}
 
 @tailwind base;
 @tailwind components;
