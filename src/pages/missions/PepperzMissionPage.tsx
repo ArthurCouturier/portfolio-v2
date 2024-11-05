@@ -8,7 +8,7 @@ export default function PepperzMissionPage() {
     const [content, setContent] = useState("");
 
     useEffect(() => {
-        fetch("/src/assets/content/pepperz/PepperzMission.md")
+        fetch("/content/pepperz/PepperzMission.md")
             .then((response) => response.text())
             .then((text) => setContent(text));
     }, []);
