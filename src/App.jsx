@@ -7,10 +7,10 @@ import Header from './components/Header';
 import Menu from './pages/Menu';
 import Skills from './pages/Skills';
 import Missions from './pages/Missions';
-import FrontSkillsPage from './pages/FrontSkillsPage';
-import BackSkillsPage from './pages/BackSkillsPage';
-import ToolsSkillsPage from './pages/ToolsSkillsPage';
-import ContactPage from './pages/ContactPage';
+import FrontSkillsPage from './pages/skills/FrontSkillsPage';
+import BackSkillsPage from './pages/skills/BackSkillsPage';
+import ToolsSkillsPage from './pages/skills/ToolsSkillsPage';
+import ContactPage from './pages/skills/ContactPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 
 const router = createBrowserRouter([

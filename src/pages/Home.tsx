@@ -25,6 +25,9 @@ export default function Home() {
                     <Speciality href={"/contact"}>Contact Me !</Speciality>
                 </div>
             </div>
+            <div className="text-center animate-fade-in">
+                <Speciality href={"https://www.arthurcouturier.fr"} new_tab={true}>My ex-portoflio</Speciality>
+            </div>
         </div>
     )
 }
@@ -36,6 +39,7 @@ function Speciality({ children, href, new_tab = false }) {
             className={`p-4 bg-coutPurple hover:bg-coutYellow rounded-lg shadow-lg ${boxSizeProperty} transition-transform duration-300 transform hover:scale-105 active:scale-90`}
             href={href}
             target={new_tab ? "_blank" : "_self"}
+            rel={new_tab ? "noopener noreferrer" : ""}
         >
             {children}
         </a>

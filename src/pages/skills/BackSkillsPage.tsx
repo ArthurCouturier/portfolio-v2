@@ -1,10 +1,10 @@
 import React from "react";
-import SkillCategoryButton from "../components/SkillCategoryButton";
+import SkillCategoryButton from "../../components/SkillCategoryButton";
 
-export default function ToolsSkillsPage() {
+export default function BackSkillsPage() {
     return (
         <div>
-            This page is under construction actually
+            🏗️ This page is under construction actually
             <div className="mt-7">
                 <SkillCategoryButton url="/web-skills">Back</SkillCategoryButton>
             </div>
