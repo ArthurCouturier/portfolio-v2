@@ -11,10 +11,10 @@ In Spring 2024, I wanted to develop a new web application using React and a Java
 In the aim to develop first assets, I used OpenAI's Dall.e. It generated me first images of a pepper social network involving users but most of all ideas of logo to add on my application. These are examples of suggested logos:
 
 <div class="logo-grid">
-  <img src="/src/assets/content/pepperz/logo1.png" alt="Logo 1" />
-  <img src="/src/assets/content/pepperz/logo2.png" alt="Logo 2" />
-  <img src="/src/assets/content/pepperz/logo3.png" alt="Logo 3" />
-  <img src="/src/assets/content/pepperz/logo4.png" alt="Logo 4" />
+  <img src="/content/pepperz/logo1.png" alt="Logo 1" />
+  <img src="/content/pepperz/logo2.png" alt="Logo 2" />
+  <img src="/content/pepperz/logo3.png" alt="Logo 3" />
+  <img src="/content/pepperz/logo4.png" alt="Logo 4" />
 </div>
 
 You can remark the AI mixed types of peppers. In french 🇫🇷, "poivre" only means "black pepper" and "poivron" means others. I didn't know it before but that's why it's mixing colors on logos.
@@ -26,10 +26,10 @@ I made several features in the app. First, the user can browse between 4 types o
 I implemented a secured logging system using Google. This logging system is secured by provided token access. This is used to create a new type of pepper for example that can be approved by an administrator (thus, I created a role system). This was more a technical challenge than a real usual need. If I wanted to go further on this point, I could imagine an implementation of KrakenD and Keycloak to secure more efficiently my API.
 
 <div class="logo-grid">
-  <img src="/src/assets/content/pepperz/screen1.jpg" alt="Logo 1" />
-  <img src="/src/assets/content/pepperz/screen2.jpg" alt="Logo 2" />
-  <img src="/src/assets/content/pepperz/screen3.jpg" alt="Logo 3" />
-  <img src="/src/assets/content/pepperz/screen4.jpg" alt="Logo 4" />
+  <img src="/content/pepperz/screen1.jpg" alt="Logo 1" />
+  <img src="/content/pepperz/screen2.jpg" alt="Logo 2" />
+  <img src="/content/pepperz/screen3.jpg" alt="Logo 3" />
+  <img src="/content/pepperz/screen4.jpg" alt="Logo 4" />
 </div>
 
 ## Technologies employed ⚙️
