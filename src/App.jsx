@@ -12,6 +12,7 @@ import BackSkillsPage from './pages/skills/BackSkillsPage';
 import ToolsSkillsPage from './pages/skills/ToolsSkillsPage';
 import ContactPage from './pages/skills/ContactPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
+import TelespazioMissionPage from './pages/missions/TelespazioMissionPage';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/missions/pepperz-app',
     element: <PepperzMissionPage />,
+  },
+  {
+    path: '/missions/telespazio',
+    element: <TelespazioMissionPage />,
   },
   {
     path: '/contact',
