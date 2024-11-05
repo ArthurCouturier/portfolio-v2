@@ -7,6 +7,7 @@ export default function Home() {
                 <p className="text-lg md:text-xl animate-fade-in-delay">French Freelance Engineer based in {" "}
                     <a href="https://metropole.toulouse.fr"
                         className="inline-block hover:text-pink-400 hover:scale-105 transform duration-200"
+                        target="_blank" rel="noreferrer"
                     >
                         Toulouse
                     </a>
@@ -19,10 +20,13 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 text-center animate-fade-in">
                     <Speciality href={"/web-skills"}>My Skills</Speciality>
-                    <Speciality href={"/web-skills"}>Software Dev</Speciality>
+                    <Speciality href={"/missions"}>Missions</Speciality>
                     <Speciality href={"https://www.malt.fr/profile/arthurcouturier"} new_tab={true}>Malt Profile</Speciality>
-                    <Speciality href={"/web-skills"}>Contact Me !</Speciality>
+                    <Speciality href={"/contact"}>Contact Me !</Speciality>
                 </div>
+            </div>
+            <div className="text-center animate-fade-in">
+                <Speciality href={"https://www.arthurcouturier.fr"} new_tab={true}>My ex-portoflio</Speciality>
             </div>
         </div>
     )
@@ -35,6 +39,7 @@ function Speciality({ children, href, new_tab = false }) {
             className={`p-4 bg-coutPurple hover:bg-coutYellow rounded-lg shadow-lg ${boxSizeProperty} transition-transform duration-300 transform hover:scale-105 active:scale-90`}
             href={href}
             target={new_tab ? "_blank" : "_self"}
+            rel={new_tab ? "noopener noreferrer" : ""}
         >
             {children}
         </a>

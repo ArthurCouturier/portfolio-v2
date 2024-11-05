@@ -1,5 +1,6 @@
 import React from "react";
 import Skill from "../components/Skill";
+import SkillCategoryButton from "../components/SkillCategoryButton";
 
 const FrontSkills = [
     { name: "TypeScript", icon: "devicon-typescript-plain", url: "https://www.typescriptlang.org" },
@@ -57,7 +58,7 @@ export default function Skills() {
     return (
         <div className={"flex flex-col pb-40 h-screen overflow-y-auto no-scrollbar"}>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-9s mx-2 lg:mx-5"}>
-                <SkillCategoryButton>Front</SkillCategoryButton>
+                <SkillCategoryButton url="/web-skills/frontend">Front</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {FrontSkills.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />
@@ -65,7 +66,7 @@ export default function Skills() {
                 </div>
             </div>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-10 mx-2 lg:mx-5"}>
-                <SkillCategoryButton>Back</SkillCategoryButton>
+                <SkillCategoryButton url="/web-skills/backend">Back</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {BackSkills.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />
@@ -73,7 +74,7 @@ export default function Skills() {
                 </div>
             </div>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-10 mx-2 lg:mx-5"}>
-                <SkillCategoryButton>Tools</SkillCategoryButton>
+                <SkillCategoryButton url="/web-skills/tools">Tools</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {Tools.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />
@@ -83,14 +84,3 @@ export default function Skills() {
         </div>
     )
 };
-
-function SkillCategoryButton({ children }) {
-    const scalling = "scale-[1.5] sm:scale-[1.6] md:scale-[1.8] lg:scale-[2] active:scale-[1.3] active:sm:scale-[1.4] active:md:scale-[1.6] active:lg:scale-[1.8]"
-    const colors = "text-coutYellow bg-coutPurple border-coutYellow"
-    return (
-        <button
-            className={`font-bold text-center md:text-center font-tigedeblug w-[20vw] block mx-auto border-2 bg-opacity-80 hover:bg-opacity-100 ${colors} ${scalling} transition duration-200`}>
-            {children}
-        </button>
-    )
-}
