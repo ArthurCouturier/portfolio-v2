@@ -6,11 +6,11 @@ export default function Missions() {
         <div className={"flex flex-col justify-center"}>
             <h1 className="text-center text-coutYellow scale-150">Missions I've done</h1>
             <div className={"flex-col items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-10"}>
-                <MissionCard title="Thalès / Telespazio" url="">
-                    Thalès / Telespazio
+                <MissionCard title="Thalès / Telespazio" url="/missions/telespazio">
+                    <img src="/content/telespazio/telespazio-logo.png" alt="Pepperz Logo" />
                 </MissionCard>
                 <MissionCard title="Pepperz App" url="/missions/pepperz-app">
-                    <img src="/pepperz-logo.png" alt="Pepperz Logo" />
+                    <img src="/content/pepperz/pepperz-logo.png" alt="Pepperz Logo" />
                 </MissionCard>
                 <MissionCard title="This Portfolio" url="">
                     This Portfolio
