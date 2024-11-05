@@ -72,12 +72,12 @@ export default function App() {
   };
 
   return (
-    <div className="bg-indigo-300 w-screen min-h-screen relative overflow-hidden font-semibold text-xl">
+    <div className="bg-indigo-300 w-screen min-h-screen relative overflow-scroll font-semibold text-xl">
       <div ref={headerRef}>
         <Header handleCircleExpanded={handleCircleClick} />
       </div>
       <div
-        style={{ height: `calc(100vh - ${headerHeight}px)` }}
+        style={{ height: `calc(90vh - ${headerHeight}px)` }}
         className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'} overflow-y-auto relative inset-x-0`}
       >
         <RouterProvider router={router} />

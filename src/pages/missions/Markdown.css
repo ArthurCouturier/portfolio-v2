@@ -1,0 +1,34 @@
+.markdown-content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content p {
+    margin-bottom: 1em;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Espace entre les images */
+    max-width: 400px; /* Optionnel : Limite la largeur de la grille */
+    margin: auto; /* Centre la grille */
+  }
+  
+  .logo-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optionnel : coins arrondis pour les images */
+  }
+  
+  .markdown-content a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
