@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.ttf", "**/*.md"],
+  assetsInclude: ["**/*.md", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.ttf", "**/*.md", "**/*.pdf"],
   base: '/', // Définit le chemin de base pour le déploiement à la racine
   build: {
     outDir: 'dist', // Le répertoire de sortie pour la build
