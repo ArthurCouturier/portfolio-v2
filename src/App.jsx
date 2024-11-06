@@ -82,8 +82,8 @@ export default function App() {
         <Header handleCircleExpanded={handleCircleClick} />
       </div>
       <div
-        style={{ height: `calc(90vh - ${headerHeight}px)` }}
-        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'} overflow-y-auto relative inset-x-0`}
+        style={{ height: `calc(89vh - ${headerHeight}px)` }}
+        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'} overflow-y-auto overflow-x-hidden relative inset-x-0`}
       >
         <RouterProvider router={router} />
       </div>
