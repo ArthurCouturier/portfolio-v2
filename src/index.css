@@ -1,6 +1,5 @@
-body::-webkit-scrollbar {
-  width: 0.2em;
-  background-color: transparent;
+body {
+  background-color: rgb(165 180 252);
 }
 
 @font-face {

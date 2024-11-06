@@ -26,7 +26,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="text-center animate-fade-in">
-                <Speciality href={"https://www.arthurcouturier.fr"} new_tab={true}>My ex-portoflio</Speciality>
+                <Speciality href={"https://www.v1.arthurcouturier.fr"} new_tab={true}>My ex-portoflio</Speciality>
             </div>
         </div>
     )
