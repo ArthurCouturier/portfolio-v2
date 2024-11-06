@@ -22,11 +22,10 @@ export default function Home() {
                     <Speciality href={"/web-skills"}>My Skills</Speciality>
                     <Speciality href={"/missions"}>Missions</Speciality>
                     <Speciality href={"https://www.malt.fr/profile/arthurcouturier"} new_tab={true}>Malt Profile</Speciality>
+                    <Speciality href={"/content/CV-Arthur-Couturier.pdf"} new_tab={true}>My Resume</Speciality>
+                    <Speciality href={"https://www.v1.arthurcouturier.fr"} new_tab={true}>Ex-portfolio</Speciality>
                     <Speciality href={"/contact"}>Contact Me !</Speciality>
                 </div>
-            </div>
-            <div className="text-center animate-fade-in">
-                <Speciality href={"https://www.v1.arthurcouturier.fr"} new_tab={true}>My ex-portoflio</Speciality>
             </div>
         </div>
     )
