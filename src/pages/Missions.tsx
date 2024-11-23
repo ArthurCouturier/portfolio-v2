@@ -6,6 +6,9 @@ export default function Missions() {
         <div className={"flex flex-col justify-center"}>
             <h1 className="text-center text-coutYellow scale-150">Missions I've done</h1>
             <div className={"flex-col items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-10"}>
+                <MissionCard title="Three.js Galaxy" url="/missions/galaxy">
+                    <img src="/content/galaxy/pageImage.png" alt="Galaxy Project" />
+                </MissionCard>
                 <MissionCard title="Thalès / Telespazio" url="/missions/telespazio">
                     <img src="/content/telespazio/telespazio-logo.png" alt="Pepperz Logo" />
                 </MissionCard>

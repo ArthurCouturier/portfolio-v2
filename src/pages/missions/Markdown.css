@@ -17,7 +17,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px; /* Espace entre les images */
     max-width: 400px; /* Optionnel : Limite la largeur de la grille */
-    margin: auto; /* Centre la grille */
+    margin: auto;
   }
   
   .logo-grid img {
@@ -25,6 +25,14 @@
     height: auto;
     object-fit: cover;
     border-radius: 8px; /* Optionnel : coins arrondis pour les images */
+  }
+
+  .single img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optionnel : coins arrondis pour les images */
+    margin: auto;
   }
   
   .markdown-content a {
