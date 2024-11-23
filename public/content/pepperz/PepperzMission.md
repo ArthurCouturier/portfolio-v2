@@ -1,7 +1,5 @@
 # Mission Pepperz.app 🌶️
 
-🏗️ This page is under construction actually.
-
 ## Project Vision & Evolution 👀
 
 In Spring 2024, I wanted to develop a new web application using React and a Java / SpringBoot backend. This application had to achieve 2 goals: expose in a concrete case part of my skills and enjoy to develop a new application on my free time. Thus, I decided to create a cooking web application because I love cooking. Some days later, I decided to turn this application (that was most a marmitton-like) to an application specialized in pepper.
