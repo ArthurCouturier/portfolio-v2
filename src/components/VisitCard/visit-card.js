@@ -48,8 +48,16 @@ export function initVisitCard(canvas, container) {
     scene.add(group)
     
     // Base camera
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-    camera.position.set(0, 0, 4)
+    
+    if (isTouchDevice) {
+        camera.position.set(0, 0, 5); // Plus reculé pour les appareils tactiles
+    } else {
+        camera.position.set(0, 0, 4); // Position standard
+    }
+    
     group.add(camera)
     
     /**
@@ -200,6 +208,15 @@ export function initVisitCard(canvas, container) {
         cursor.x = event.clientX / sizes.width - 0.7;
         cursor.y = -(event.clientY / sizes.height - 0.7);
     })
+
+    canvas.addEventListener('touchmove', (event) => {
+        if (event.touches.length === 1) { // Un seul doigt
+            const touch = event.touches[0];
+            const rect = container.getBoundingClientRect();
+            cursor.x = (touch.clientX - rect.left) / sizes.width - 0.5;
+            cursor.y = (touch.clientY - rect.top) / sizes.height - 0.5;
+        }
+    }, { passive: true });
     
     // Click animation
     let isFlipped = false;
@@ -218,8 +235,13 @@ export function initVisitCard(canvas, container) {
     // Scene animation
     function tick() {
         // Rotate the card
-        group.rotation.y = cursor.x * Math.PI / 6;
-        group.rotation.x = - cursor.y * Math.PI / 6;
+        if (isTouchDevice) {
+            group.rotation.y = - cursor.x * Math.PI / 6;
+            group.rotation.x = cursor.y * Math.PI / 6;
+        } else {
+            group.rotation.y = cursor.x * Math.PI / 6;
+            group.rotation.x = - cursor.y * Math.PI / 6;
+        }
     
         requestAnimationFrame(tick);
         renderer.render(scene, camera);

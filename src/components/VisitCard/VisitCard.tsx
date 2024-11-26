@@ -16,7 +16,7 @@ export default function VisitCard() {
         <div className="markdown-content w-full h-screen flex justify-center">
             <div
                 ref={containerRef}
-                className="relative w-[85vw] h-[60vh] flex"
+                className="relative w-[95vw] h-[60vh] flex"
             >
                 <canvas ref={canvasRef} className="webgl w-full h-full" />
             </div>
