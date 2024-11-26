@@ -94,7 +94,7 @@ export default function App() {
       </div>
 
       <div
-        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-100 z-10 visible' : 'opacity-0 invisible'} absolute inset-0`}
+        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-100 z-10 visible' : 'opacity-0 invisible'} absolute inset-0 overflow-hidden`}
       >
         <Menu />
       </div>

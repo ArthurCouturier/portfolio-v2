@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
+    "lil-gui": "^0.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
@@ -17,7 +19,6 @@
     "rehype-raw": "^7.0.0",
     "require": "^2.4.20",
     "tailwind-scrollbar-hide": "^1.1.7",
-    "lil-gui": "^0.19.2",
     "three": "^0.166.1"
   },
   "devDependencies": {
