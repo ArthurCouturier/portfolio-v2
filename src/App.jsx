@@ -82,7 +82,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-indigo-300 w-screen min-h-screen relative overflow-scroll font-semibold text-xl">
+    <div className="bg-indigo-300 w-screen min-h-screen relative font-semibold text-xl">
       <div ref={headerRef}>
         <Header handleCircleExpanded={handleCircleClick} />
       </div>
@@ -94,7 +94,7 @@ export default function App() {
       </div>
 
       <div
-        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-100 z-10 visible' : 'opacity-0 invisible'} absolute inset-0`}
+        className={`transition-opacity duration-500 ease-in-out ${circleExpanded ? 'opacity-100 z-10 visible' : 'opacity-0 invisible'} absolute inset-0 overflow-hidden`}
       >
         <Menu />
       </div>

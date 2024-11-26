@@ -35,3 +35,7 @@
   position: absolute;
   z-index: -1;
 }
+
+body.overflow-hidden {
+  overflow: hidden;
+}
