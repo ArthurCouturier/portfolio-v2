@@ -1,5 +1,12 @@
 body {
-  background-color: rgb(165 180 252);
+  background-color: #a5b4fc;
+  background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+  overflow: hidden;
+}
+
+#app {
+  background-color: #a5b4fc;
+  background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
 }
 
 @font-face {
