@@ -82,7 +82,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-indigo-300 w-screen min-h-screen relative font-semibold text-xl">
+    <div className="bg-indigo-300 w-screen min-h-screen relative font-semibold text-xl" id="app">
       <div ref={headerRef}>
         <Header handleCircleExpanded={handleCircleClick} />
       </div>
