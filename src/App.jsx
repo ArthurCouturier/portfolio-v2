@@ -14,6 +14,7 @@ import ContactPage from './pages/skills/ContactPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 import TelespazioMissionPage from './pages/missions/TelespazioMissionPage';
 import GalaxyMissionPage from './pages/missions/GalaxyMissionPage';
+import PlanAppetitPage from './pages/missions/PlanAppetitPage';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: '/missions/galaxy',
     element: <GalaxyMissionPage />,
+  },
+  {
+    path: '/missions/plan-appetit',
+    element: <PlanAppetitPage />,
   },
   {
     path: '/contact',
