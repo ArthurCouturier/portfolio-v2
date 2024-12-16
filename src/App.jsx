@@ -10,11 +10,11 @@ import Missions from './pages/Missions';
 import FrontSkillsPage from './pages/skills/FrontSkillsPage';
 import BackSkillsPage from './pages/skills/BackSkillsPage';
 import ToolsSkillsPage from './pages/skills/ToolsSkillsPage';
-import ContactPage from './pages/skills/ContactPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 import TelespazioMissionPage from './pages/missions/TelespazioMissionPage';
 import GalaxyMissionPage from './pages/missions/GalaxyMissionPage';
 import PlanAppetitPage from './pages/missions/PlanAppetitPage';
+import ContactPage from './pages/Contact';
 
 const router = createBrowserRouter([
   {
