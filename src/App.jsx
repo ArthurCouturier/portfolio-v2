@@ -13,6 +13,7 @@ import ToolsSkillsPage from './pages/skills/ToolsSkillsPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 import TelespazioMissionPage from './pages/missions/TelespazioMissionPage';
 import GalaxyMissionPage from './pages/missions/GalaxyMissionPage';
+import Car from './pages/missions/Car/Car';
 import PlanAppetitPage from './pages/missions/PlanAppetitPage';
 import ContactPage from './pages/Contact';
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: '/missions/galaxy',
     element: <GalaxyMissionPage />,
+  },
+  {
+    path: '/missions/car',
+    element: <Car />,
   },
   {
     path: '/missions/plan-appetit',

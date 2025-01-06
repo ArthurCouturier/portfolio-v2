@@ -12,6 +12,9 @@ export default function Missions() {
                 <MissionCard title="Three.js Galaxy" url="/missions/galaxy">
                     <img src="/content/galaxy/pageImage.png" alt="Galaxy Project" />
                 </MissionCard>
+                <MissionCard title="Three.js Car" url="/missions/car">
+                    <img src="/content/galaxy/pageImage.png" alt="Galaxy Project" />
+                </MissionCard>
                 <MissionCard title="Thalès / Telespazio" url="/missions/telespazio">
                     <img src="/content/telespazio/telespazio-logo.png" alt="Pepperz Logo" />
                 </MissionCard>
