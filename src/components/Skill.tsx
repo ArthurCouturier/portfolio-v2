@@ -15,7 +15,7 @@ export default function Skill(props: { skill: string }) {
     return (
         <div className={"sm:my-2 md:my-4 lg:my-6 xl:my-7 flex justify-center scale-50 sm:scale-75 md:scale-900 lg:scale-100 xl:scale-110"}>
             <a href={skill.url} className={""} target={"_blank"}>
-                <i className={`${logo} text-[80px] transition duration-300 hover:text-opacity-100 opacity-90`} onMouseEnter={changerLogo} onMouseLeave={changerLogo}></i>
+                <i className={`${logo} text-[80px] transition duration-300 opacity-90 hover:opacity-100`} onMouseEnter={changerLogo} onMouseLeave={changerLogo}></i>
             </a>
         </div>
     )

@@ -5,7 +5,7 @@ export default function MissionCard({ children, title, url }) {
 
     return (
         <button
-            className="bg-coutPurple bg-opacity-60 rounded-3xl w-[61vw] md:w-[36vw] xl:w-[18vw] mx-auto my-5 transition duration-200 hover:scale-95 active:scale-105"
+            className="bg-coutPurple/60 rounded-3xl w-[61vw] md:w-[36vw] xl:w-[18vw] mx-auto my-5 transition duration-200 hover:scale-95 active:scale-105"
             onClick={() => window.location.href = url}
             onMouseEnter={() => setHandled(true)}
             onMouseLeave={() => setHandled(false)}

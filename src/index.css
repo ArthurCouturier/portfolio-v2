@@ -1,3 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-tigedeblug: 'Tigedeblug', sans-serif;
+  --color-coutYellow: #f4cf77;
+  --color-coutPurple: #2f2e6e;
+}
+
+@font-face {
+  font-family: 'Tigedeblug';
+  src: url('./assets/fonts/Tigedeblug.ttf') format('truetype');
+}
+
 body {
   background-color: #a5b4fc;
   background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
@@ -9,21 +22,11 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
 }
 
-@font-face {
-  font-family: 'Tigedeblug';
-  src: url('./assets/fonts/Tigedeblug.ttf') format('truetype');
-}
-
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Cache la scrollbar sur Chrome, Safari et Opera */
+  display: none;
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* Cache la scrollbar sur Internet Explorer et Edge */
-  scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-

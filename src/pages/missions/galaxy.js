@@ -172,8 +172,8 @@ export function initGalaxy(canvas, container, guiContainer) {
     
     const tick = () =>
     {
-        const elapsedTime = clock.getElapsedTime()
-    
+        clock.getElapsedTime()
+
         // Update controls
         controls.update()
     
