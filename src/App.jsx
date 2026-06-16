@@ -15,7 +15,6 @@ import TelespazioMissionPage from './pages/missions/TelespazioMissionPage';
 import GalaxyMissionPage from './pages/missions/GalaxyMissionPage';
 import Car from './pages/missions/Car/Car';
 import PlanAppetitPage from './pages/missions/PlanAppetitPage';
-import ContactPage from './pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -61,10 +60,6 @@ const router = createBrowserRouter([
   {
     path: '/missions/plan-appetit',
     element: <PlanAppetitPage />,
-  },
-  {
-    path: '/contact',
-    element: <ContactPage />,
   },
 ]);
 

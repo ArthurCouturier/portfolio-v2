@@ -1,4 +1,5 @@
 import React from "react";
+import Skill from "../components/Skill";
 
 export default function Home() {
     return (
@@ -23,8 +24,38 @@ export default function Home() {
                     <Speciality href={"/missions"}>Missions</Speciality>
                     <Speciality href={"https://www.malt.fr/profile/arthurcouturier"} new_tab={true}>Malt Profile</Speciality>
                     <Speciality href={"/content/CV-Arthur-Couturier.pdf"} new_tab={true}>Resume</Speciality>
-                    <Speciality href={"https://www.v1.arthurcouturier.fr"} new_tab={true}>Ex-portfolio</Speciality>
-                    <Speciality href={"/contact"}>Contact Me !</Speciality>
+                </div>
+
+                <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 animate-fade-in">
+                    <Skill
+                        skill={JSON.stringify({
+                            name: "LinkedIn",
+                            icon: "devicon-linkedin-plain",
+                            url: "https://www.linkedin.com/in/arthur-couturier/",
+                        })}
+                    />
+                    <a
+                        href="mailto:arthurcouturier.freelance@gmail.com"
+                        aria-label="Mail"
+                        className="sm:my-2 md:my-4 lg:my-6 xl:my-7 flex justify-center items-center scale-75 sm:scale-90 md:scale-90 lg:scale-100 xl:scale-110"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="w-20 h-20 text-coutPurple hover:text-coutYellow transition duration-300"
+                        >
+                            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                            <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+                    </a>
+                    <Skill
+                        skill={JSON.stringify({
+                            name: "Github",
+                            icon: "devicon-github-original",
+                            url: "https://github.com/ArthurCouturier",
+                        })}
+                    />
                 </div>
             </div>
         </div>
