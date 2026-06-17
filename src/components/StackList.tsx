@@ -21,11 +21,14 @@ export default function StackList({ stack }: { stack: Stack }) {
             {rows.map(({ key, labelKey }) => (
                 <div key={key} className="flex items-center gap-3">
                     <span className="text-coutYellow text-sm font-bold w-14 shrink-0">{t(labelKey)}</span>
-                    <ul className="flex flex-wrap gap-2">
+                    {/* Inline list resets override the `.markdown-content ul/li`
+                        rules (disc bullets + indent) on mission article pages. */}
+                    <ul className="flex flex-wrap gap-2" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                         {stack[key]!.map((tech) => (
                             <li
                                 key={tech}
                                 className="text-xs font-normal text-white bg-coutPurple/60 rounded-full px-3 py-1"
+                                style={{ margin: 0 }}
                             >
                                 {tech}
                             </li>
