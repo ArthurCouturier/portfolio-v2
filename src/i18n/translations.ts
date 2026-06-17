@@ -18,6 +18,7 @@ export const translations: Record<string, Translation> = {
     "home.missions": { fr: "Missions", en: "Missions" },
     "home.malt": { fr: "Profil Malt", en: "Malt Profile" },
     "home.resume": { fr: "CV", en: "Resume" },
+    "home.clickHint": { fr: "clic ici !", en: "click here!" },
 
     // Missions index
     "missions.title": { fr: "Mes missions & projets", en: "My missions & projects" },

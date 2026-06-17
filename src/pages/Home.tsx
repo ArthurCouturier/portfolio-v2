@@ -6,6 +6,7 @@ export default function Home() {
     const { t, lang } = useLanguage();
     return (
         <div className="flex flex-col items-center h-max text-white font-sans">
+            <ClickHint />
             <div className="flex flex-col items-center justify-center h-1/2 text-center p-4 space-y-4">
                 <p className="text-lg md:text-xl animate-fade-in-delay">{t("home.tagline")} {" "}
                     <a href="https://metropole.toulouse.fr"
@@ -62,6 +63,39 @@ export default function Home() {
             </div>
         </div>
     )
+}
+
+// Hand-drawn nudge inviting the click that triggers the visit-card reveal, with
+// an arrow sweeping up-right toward the profile photo. Anchored on the right with
+// a vw offset that mirrors the photo's responsive width, so it tracks the photo
+// horizontally as the viewport grows (vertical position stays put). Purely
+// decorative: `pointer-events-none`, and it fades out with the page on overlay open.
+function ClickHint() {
+    const { t } = useLanguage();
+    return (
+        <div className="fixed top-[3rem] sm:top-[4.75rem] md:top-[3.5rem] right-[calc(2rem+16vw)] sm:right-[calc(2rem+13vw)] md:right-[calc(2rem+9vw)] lg:right-[calc(2rem+8vw)] xl:right-[calc(2rem+6.5vw)] z-30 flex items-center gap-1 pointer-events-none select-none animate-fade-in-delay">
+            <span className="font-hand text-coutPurple text-3xl sm:text-4xl md:text-5xl -rotate-6 leading-none [text-shadow:0_1px_2px_rgba(255,255,255,0.5)]">
+                {t("home.clickHint")}
+            </span>
+            {/* Aim the whole arrow at the photo centre by rotating it — tweak the
+                rotate-[..deg] value to fine-tune (positive = tip swings down/right). */}
+            <svg
+                viewBox="0 0 100 100"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-coutPurple shrink-0 rotate-[12deg]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            >
+                {/* wobbly shaft sweeping up-right toward the photo */}
+                <path d="M12,72 C 38,78 56,52 86,26" />
+                {/* arrowhead at the tip */}
+                <path d="M86,26 L68,26" />
+                <path d="M86,26 L83,45" />
+            </svg>
+        </div>
+    );
 }
 
 function Speciality({ children, href, new_tab = false }) {

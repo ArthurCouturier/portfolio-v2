@@ -2,6 +2,7 @@
 
 @theme {
   --font-tigedeblug: 'Tigedeblug', sans-serif;
+  --font-hand: 'Caveat', cursive;
   --color-coutYellow: #f4cf77;
   --color-coutPurple: #2f2e6e;
 }
