@@ -1,4 +1,4 @@
-# Mission Galaxy 🌌
+# Galaxy Mission 🌌
 
 ## My first Three.js project
 

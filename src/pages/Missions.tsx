@@ -1,36 +1,32 @@
 import React from "react";
 import MissionCard from "../components/MissionCard";
+import BackButton from "../components/BackButton";
+import PageContainer from "../components/PageContainer";
+import { missions } from "../data/missions";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Missions() {
+    const { t } = useLanguage();
+
     return (
-        <div className={"flex flex-col justify-center"}>
-            <h1 className="text-center text-coutYellow scale-150">Missions I've done</h1>
-            <div className={"flex-col items-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mx-10"}>
-                <MissionCard title="Plan'Appétit" url="/missions/plan-appetit">
-                    <img src="/content/plan-appetit/image.png" alt="Plan'Appétit" />
-                </MissionCard>
-                <MissionCard title="Three.js Galaxy" url="/missions/galaxy">
-                    <img src="/content/galaxy/pageImage.png" alt="Galaxy Project" />
-                </MissionCard>
-                <MissionCard title="Three.js Car" url="/missions/car">
-                    <img src="/content/galaxy/pageImage.png" alt="Galaxy Project" />
-                </MissionCard>
-                <MissionCard title="Thalès / Telespazio" url="/missions/telespazio">
-                    <img src="/content/telespazio/telespazio-logo.png" alt="Pepperz Logo" />
-                </MissionCard>
-                <MissionCard title="Pepperz App" url="/missions/pepperz-app">
-                    <img src="/content/pepperz/pepperz-logo.png" alt="Pepperz Logo" />
-                </MissionCard>
-                <MissionCard title="This Portfolio" url="">
-                    This Portfolio
-                </MissionCard>
-                <MissionCard title="My ex-Portfolio" url="">
-                    My ex-Portfolio
-                </MissionCard>
-                <MissionCard title="Anthéa Avocats Associés" url="">
-                    Anthéa Avocats Associés
-                </MissionCard>
-            </div>
+        <div className="flex flex-col items-center text-white pb-16">
+            <PageContainer>
+                {/* Header: title centered, back button on top on small / left from md */}
+                <div className="relative my-6 md:my-8">
+                    <div className="flex justify-center mb-6 md:mb-0 md:block md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2">
+                        <BackButton to="/" />
+                    </div>
+                    <h1 className="text-center text-coutYellow text-3xl md:text-4xl font-bold">
+                        {t("missions.title")}
+                    </h1>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 w-full justify-items-center">
+                    {missions.map((mission) => (
+                        <MissionCard key={mission.slug} mission={mission} />
+                    ))}
+                </div>
+            </PageContainer>
         </div>
     );
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import Skill from "../components/Skill";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Home() {
+    const { t, lang } = useLanguage();
     return (
         <div className="flex flex-col items-center h-max text-white font-sans">
             <div className="flex flex-col items-center justify-center h-1/2 text-center p-4 space-y-4">
-                <p className="text-lg md:text-xl animate-fade-in-delay">French Freelance Engineer based in {" "}
+                <p className="text-lg md:text-xl animate-fade-in-delay">{t("home.tagline")} {" "}
                     <a href="https://metropole.toulouse.fr"
                         className="inline-block hover:text-pink-400 hover:scale-105 transform duration-200"
                         target="_blank" rel="noreferrer"
@@ -13,17 +15,17 @@ export default function Home() {
                         Toulouse
                     </a>
                 </p>
-                <p className="text-md md:text-lg animate-fade-in-delay">Creating innovative solutions for web and software development</p>
+                <p className="text-md md:text-lg animate-fade-in-delay">{t("home.subtitle")}</p>
             </div>
 
             <div className="flex flex-col items-center h-1/3 w-full p-6 md:p-12 space-y-6">
-                <h2 className="text-2xl md:text-3xl font-semibold">My Specialities</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold">{t("home.specialities")}</h2>
 
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 text-center animate-fade-in">
-                    <Speciality href={"/web-skills"}>Skills</Speciality>
-                    <Speciality href={"/missions"}>Missions</Speciality>
-                    <Speciality href={"https://www.malt.fr/profile/arthurcouturier"} new_tab={true}>Malt Profile</Speciality>
-                    <Speciality href={"/content/CV-Arthur-Couturier.pdf"} new_tab={true}>Resume</Speciality>
+                    <Speciality href={"/web-skills"}>{t("home.skills")}</Speciality>
+                    <Speciality href={"/missions"}>{t("home.missions")}</Speciality>
+                    <Speciality href={"https://www.malt.fr/profile/arthurcouturier"} new_tab={true}>{t("home.malt")}</Speciality>
+                    <Speciality href={`/content/CV-Arthur-Couturier-${lang}.pdf`} new_tab={true}>{t("home.resume")}</Speciality>
                 </div>
 
                 <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 animate-fade-in">
