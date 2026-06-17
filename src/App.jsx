@@ -7,9 +7,6 @@ import Header from './components/Header';
 import Menu from './pages/Menu';
 import Skills from './pages/Skills';
 import Missions from './pages/Missions';
-import FrontSkillsPage from './pages/skills/FrontSkillsPage';
-import BackSkillsPage from './pages/skills/BackSkillsPage';
-import ToolsSkillsPage from './pages/skills/ToolsSkillsPage';
 import PepperzMissionPage from './pages/missions/PepperzMissionPage';
 import GalaxyMissionPage from './pages/missions/GalaxyMissionPage';
 import PlanAppetitPage from './pages/missions/PlanAppetitPage';
@@ -26,18 +23,6 @@ const router = createBrowserRouter([
   {
     path: '/web-skills',
     element: <Skills />,
-  },
-  {
-    path: '/web-skills/frontend',
-    element: <FrontSkillsPage />,
-  },
-  {
-    path: '/web-skills/backend',
-    element: <BackSkillsPage />,
-  },
-  {
-    path: '/web-skills/tools',
-    element: <ToolsSkillsPage />,
   },
   {
     path: '/missions',
