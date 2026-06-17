@@ -16,6 +16,7 @@ import PlanAppetitPage from './pages/missions/PlanAppetitPage';
 import PlanAppetitArticle from './pages/missions/PlanAppetitArticle';
 import MissionArticlePage from './pages/missions/MissionArticlePage';
 import { LanguageProvider } from './i18n/LanguageContext';
+import PixelReveal from './components/PixelReveal';
 
 const router = createBrowserRouter([
   {
@@ -75,8 +76,8 @@ const router = createBrowserRouter([
 export default function App() {
   // Single source of truth for the visit-card overlay — robust to rapid double-clicks.
   const [menuOpen, setMenuOpen] = useState(false);
-  // Origin of the circular "liquid" reveal: the centre of the profile photo.
-  const [origin, setOrigin] = useState({ x: '92%', y: '8%' });
+  // Origin of the tile-dissolve reveal (px): the centre of the profile photo.
+  const [origin, setOrigin] = useState({ x: 0, y: 0 });
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef(null);
 
@@ -90,7 +91,7 @@ export default function App() {
     const photo = document.getElementById('profile-photo');
     if (photo) {
       const r = photo.getBoundingClientRect();
-      setOrigin({ x: `${r.left + r.width / 2}px`, y: `${r.top + r.height / 2}px` });
+      setOrigin({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
     }
     setMenuOpen((open) => !open);
   };
@@ -114,29 +115,12 @@ export default function App() {
           <Header onToggleMenu={toggleMenu} />
         </div>
 
-        {/* Visit-card overlay: a coutPurple background revealed with a circular "liquid"
-            wipe emanating from the photo, with the 3D card fading in as it fills. */}
-        <div
-          aria-hidden={!menuOpen}
-          className="absolute inset-0 z-40 bg-coutPurple overflow-hidden"
-          style={{
-            clipPath: `circle(${menuOpen ? '150vmax' : '0px'} at ${origin.x} ${origin.y})`,
-            transition: 'clip-path 650ms cubic-bezier(0.4, 0, 0.2, 1)',
-            pointerEvents: menuOpen ? 'auto' : 'none',
-          }}
-        >
-          <div
-            className="w-full h-full"
-            style={{
-              opacity: menuOpen ? 1 : 0,
-              transition: menuOpen
-                ? 'opacity 400ms ease-out 250ms'
-                : 'opacity 150ms ease-in',
-            }}
-          >
-            <Menu />
-          </div>
-        </div>
+        {/* Visit-card overlay: a coutPurple background that materialises as a grid
+            of tiles cascading out from the photo, with the 3D card fading in once
+            the tiles cover the screen. */}
+        <PixelReveal open={menuOpen} origin={origin}>
+          <Menu />
+        </PixelReveal>
       </div>
     </LanguageProvider>
   );
