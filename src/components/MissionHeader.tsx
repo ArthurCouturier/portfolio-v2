@@ -33,18 +33,31 @@ export default function MissionHeader({ mission }: { mission: Mission }) {
             )}
 
             {mission.links && mission.links.length > 0 && (
-                <div className="mt-6 flex flex-wrap gap-3">
-                    {mission.links.map((link) => (
-                        <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-coutPurple bg-coutYellow hover:brightness-110 font-bold rounded-lg px-5 py-2 transition duration-200"
-                        >
-                            {link.label[lang]} <span aria-hidden="true">↗</span>
-                        </a>
-                    ))}
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                    {mission.links.map((link) =>
+                        link.badge ? (
+                            <a
+                                key={link.url + link.badge[lang]}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block transition duration-200 hover:brightness-110"
+                                aria-label={link.label[lang]}
+                            >
+                                <img src={link.badge[lang]} alt={link.label[lang]} className="h-12 w-auto" />
+                            </a>
+                        ) : (
+                            <a
+                                key={link.url}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-coutPurple bg-coutYellow hover:brightness-110 font-bold rounded-lg px-5 py-2 transition duration-200"
+                            >
+                                {link.label[lang]} <span aria-hidden="true">↗</span>
+                            </a>
+                        )
+                    )}
                 </div>
             )}
         </section>

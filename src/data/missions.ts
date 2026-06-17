@@ -4,6 +4,8 @@ export type Localized = { fr: string; en: string };
 export interface MissionLink {
     label: Localized;
     url: string;
+    /** Optional store badge image per language; rendered instead of a text button. */
+    badge?: Localized;
 }
 
 /** Technologies grouped by category. Each category is a line of techs. */
@@ -65,20 +67,22 @@ export const missions: Mission[] = [
         title: "Plan'Appétit",
         image: "/content/plan-appetit/logo-1024-plain.png",
         role: { fr: "Fondateur solo", en: "Solo Founder" },
-        period: "2025 – 2026",
+        period: "2025 - 2026",
         stack: {
             back: ["Kotlin", "Spring Boot"],
             front: ["React", "TypeScript", "Tailwind"],
             data: ["PostgreSQL", "Flyway"],
             sre: ["Docker", "Kubernetes", "VPS"],
-            other: ["Capacitor", "OpenAI", "Meta Ads"],
+            other: ["Capacitor", "AI integration", "Meta Ads"],
         },
         summary: {
             fr: "J'ai fondé Plan Appétit, une app de planification de repas et de génération de recettes par IA. J'ai conçu, développé et mis en production le produit de bout en bout, en solo, jusqu'à atteindre des milliers d'utilisateurs.",
             en: "I founded Plan Appétit, a meal-planning & AI recipe-generation app. I designed, built and shipped the full product end-to-end as a solo founder, reaching thousands of users.",
         },
         links: [
-            { label: { fr: "Ouvrir Plan'Appétit", en: "Open Plan'Appétit" }, url: "https://plan-appetit.vercel.app" },
+            { label: { fr: "App Store", en: "App Store" }, url: "https://apps.apple.com/app/plan-app%C3%A9tit/id6756276676", badge: { fr: "/content/plan-appetit/badges/app-store-fr.svg", en: "/content/plan-appetit/badges/app-store-en.svg" } },
+            { label: { fr: "Play Store", en: "Play Store" }, url: "https://play.google.com/store/apps/details?id=fr.planappetit.app", badge: { fr: "/content/plan-appetit/badges/google-play-fr.svg", en: "/content/plan-appetit/badges/google-play-en.svg" } },
+            { label: { fr: "Web App", en: "Web App" }, url: "https://www.plan-appetit.fr" },
         ],
         articles: planAppetitArticles,
     },
@@ -91,8 +95,11 @@ export const missions: Mission[] = [
         role: { fr: "Data Engineer (Freelance)", en: "Data Engineer (Freelance)" },
         period: "2025",
         stack: {
-            data: ["SQL", "Data pipelines"],
-            other: ["Shape Up"],
+            back: ["Java", "Spring Boot", "Kotlin", "Python"],
+            front: ["Angular", "TypeScript"],
+            data: ["SQL", "Flyway", "MySQL", "Mongo"],
+            sre: ["Docker", "Kubernetes"],
+            other: ["Shape Up", "Hexagonal Architecture"],
         },
         summary: {
             fr: "Trois contrats successifs dans cette entreprise d'efficacité carburant qui aide les compagnies aériennes à économiser du kérosène. Développement et maintenance du pipeline d'intégration de données.",
@@ -130,6 +137,7 @@ export const missions: Mission[] = [
         period: "2022 – 2023",
         stack: {
             back: ["Java", "Spring Boot", "JBoss"],
+            sre: ["Jenkins", "Yeoman"],
             other: ["Scrum"],
         },
         summary: {
