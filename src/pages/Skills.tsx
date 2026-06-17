@@ -58,7 +58,7 @@ export default function Skills() {
     return (
         <div className={"flex flex-col pb-40 h-screen overflow-y-auto no-scrollbar"}>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-9s mx-2 lg:mx-5"}>
-                <SkillCategoryButton url="/web-skills/frontend">Front</SkillCategoryButton>
+                <SkillCategoryButton>Front</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {FrontSkills.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />
@@ -66,7 +66,7 @@ export default function Skills() {
                 </div>
             </div>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-10 mx-2 lg:mx-5"}>
-                <SkillCategoryButton url="/web-skills/backend">Back</SkillCategoryButton>
+                <SkillCategoryButton>Back</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {BackSkills.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />
@@ -74,7 +74,7 @@ export default function Skills() {
                 </div>
             </div>
             <div className={"my-4 flex-wrap lg:my-7 xl:my-10 mx-2 lg:mx-5"}>
-                <SkillCategoryButton url="/web-skills/tools">Tools</SkillCategoryButton>
+                <SkillCategoryButton>Tools</SkillCategoryButton>
                 <div className={`h-max ${gridColsProperty}`}>
                     {Tools.map((skill) => {
                         return <Skill skill={JSON.stringify(skill)} />

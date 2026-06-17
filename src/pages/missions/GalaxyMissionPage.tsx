@@ -3,9 +3,12 @@ import { initGalaxy } from "./galaxy";
 import ReactMarkdown from "react-markdown";
 import "./Markdown.css";
 import rehypeRaw from "rehype-raw";
-import SkillCategoryButton from "../../components/SkillCategoryButton";
+import BackButton from "../../components/BackButton";
+import PageContainer from "../../components/PageContainer";
+import { useLanguage } from "../../i18n/LanguageContext";
 
 export default function GalaxyMissionPage() {
+    const { lang } = useLanguage();
     // Canvas Screen
     const canvasRef = useRef(null);
     const containerRef = useRef(null);
@@ -22,10 +25,15 @@ export default function GalaxyMissionPage() {
     const [content, setContent] = useState("");
 
     useEffect(() => {
-        fetch("/content/galaxy/GalaxyMission.md")
-            .then((response) => response.text())
-            .then((text) => setContent(text));
-    }, []);
+        let active = true;
+        fetch(`/content/galaxy/GalaxyMission.${lang}.md`)
+            .then((response) => (response.ok ? response.text() : ""))
+            .then((text) => active && setContent(text))
+            .catch(() => active && setContent(""));
+        return () => {
+            active = false;
+        };
+    }, [lang]);
 
     // Handle Fullscreen toggle
     useEffect(() => {
@@ -56,14 +64,16 @@ export default function GalaxyMissionPage() {
     }, []);
 
     return (
-        <div className="markdown-content mx-5 mt-3">
-            <ReactMarkdown className={"sm:mx-5 md:mx-10 l:mx-[15vw] xl:mx-[20vw]"} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
-            <div className="mt-10 mb-8">
-                <SkillCategoryButton url="/missions">Back</SkillCategoryButton>
-            </div>
+        <div className="markdown-content text-white">
+            <PageContainer className="py-8">
+                <div className="mb-8">
+                    <BackButton to="/missions" />
+                </div>
+                <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+            </PageContainer>
             <div
                 ref={containerRef}
-                className={`relative w-full ${isFullscreen ? "h-[100vh]" : "h-[73vh]"}`}
+                className={`relative w-full mt-8 ${isFullscreen ? "h-[100vh]" : "h-[73vh]"}`}
             >
                 <canvas ref={canvasRef} className="webgl w-full h-full" />
                 <div ref={guiContainerRef} className="absolute top-0 left-0"></div>

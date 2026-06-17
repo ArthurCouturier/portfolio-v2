@@ -36,7 +36,37 @@
   }
   
   .markdown-content a {
-    color: blue;
+    color: #f4cf77;
     text-decoration: underline;
+  }
+
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3 {
+    color: #f4cf77;
+    font-weight: 700;
+  }
+
+  .markdown-content h3 {
+    font-size: 1.25em;
+    margin-bottom: 0.4em;
+  }
+
+  .markdown-content ul {
+    list-style: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .markdown-content li {
+    margin-bottom: 0.3em;
+  }
+
+  .markdown-content strong {
+    color: #ffffff;
+  }
+
+  .markdown-content em {
+    color: rgba(255, 255, 255, 0.8);
   }
   
