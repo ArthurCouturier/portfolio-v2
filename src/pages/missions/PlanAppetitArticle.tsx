@@ -41,7 +41,7 @@ export default function PlanAppetitArticle() {
     return (
         <PageContainer className="markdown-content text-white py-8">
             <div className="mb-8">
-                <BackButton to="/missions/plan-appetit" label={t("planappetit.backToMission")} />
+                <BackButton to="/missions/plan-appetit" />
             </div>
 
             <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>

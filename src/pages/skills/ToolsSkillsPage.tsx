@@ -1,12 +1,12 @@
 import React from "react";
-import SkillCategoryButton from "../../components/SkillCategoryButton";
+import BackButton from "../../components/BackButton";
 
 export default function ToolsSkillsPage() {
     return (
         <div>
             🏗️ This page is under construction actually
             <div className="mt-7">
-                <SkillCategoryButton url="/web-skills">Back</SkillCategoryButton>
+                <BackButton to="/web-skills" />
             </div>
         </div>
     )

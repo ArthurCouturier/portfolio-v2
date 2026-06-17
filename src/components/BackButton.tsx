@@ -21,6 +21,9 @@ export default function BackButton({
     return (
         <Link
             to={to}
+            // Inline `textDecoration` beats the `.markdown-content a { underline }`
+            // rule, so the button is never underlined inside article pages.
+            style={{ textDecoration: "none" }}
             className={`inline-block text-coutYellow bg-coutPurple/80 hover:bg-coutPurple border-2 border-coutYellow rounded-lg px-5 py-2 transition duration-200 ${className}`}
         >
             ← {label ?? t("mission.back")}

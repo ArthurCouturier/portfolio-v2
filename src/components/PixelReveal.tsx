@@ -103,9 +103,10 @@ export default function PixelReveal({ open, origin, tileSize = 56, children }: P
                 {tiles}
             </div>
 
-            {/* Content layer: fades in once the tiles have covered the screen. */}
+            {/* Content layer: fades in once the tiles have covered the screen.
+                Scrolling is intentionally disabled so the visit card stays fixed. */}
             <div
-                className="absolute inset-0 overflow-y-auto overflow-x-hidden"
+                className="absolute inset-0 overflow-hidden"
                 style={{
                     opacity: open ? 1 : 0,
                     transition: open
